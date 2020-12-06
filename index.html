@@ -13,7 +13,18 @@
 
 <body>
   <h1>Scroll to see my favorite records.</h1>
+  <div class="text">
+    <p>Where are the album covers when they're not showing? They're off screen by about 400% which will fool even the
+      largest screen sizes. This is acheived by using a transform/tranistion effect along the X axis. When the boxes
+      come back into view the transition is smoothed by 'transform 0.4s ease' properties.</p>
+    <p>
+      How will they appear dynamically? We need to bring the album covers back to their home position (0), instead of
+      off screen at 400% and -400% (which coveres us in both left and right directions).
+    </p>
 
+    <p>We style a 'show' class, transform: translateX(0). The clever bit here is not adding the show class but knowing
+      when to.  In JavaScript we are listening for a scroll event (no clicking today) that will trigger when we scroll and a new 1/3 of the screen is revealed, in comes an image.</p>
+  </div>
   <div class="box">
     <img src="./img/R1344-031-Miles-Davis-KIND-OF-BLUE.jpg" alt="album cover Miles-Davis-KIND-OF-BLUE">
   </div>
